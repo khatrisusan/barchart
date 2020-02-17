@@ -10,7 +10,7 @@ let arr = [];
 let count = 0;
 let timeOut = 1000;
 function arrayExceeds() {
-  if (count <= arr.length) {
+  if (count < 20) {
     addSomething();
   } else {
     // remove the last no.
@@ -21,7 +21,7 @@ function arrayExceeds() {
 }
 
 function addSomething() {
-  arr.push(count);
+  arr.push(Math.round((Math.random())*100));
   count++;
   console.log(arr);
   setTimeout(arrayExceeds, timeOut);
@@ -29,7 +29,7 @@ function addSomething() {
 }
 
 function setHeight(){
-    for(let i =0; i<=arr.length; i++){
+    for(let i =0; i < 20; i++){
         let bar;
         // find the bar
 bar= document.querySelector(`#container > div:nth-child(${i+1})`)
@@ -38,7 +38,4 @@ bar= document.querySelector(`#container > div:nth-child(${i+1})`)
  console.log(i);
  console.log("height")
     }
-        
-    
-
 }
